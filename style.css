@@ -3,11 +3,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f5f5f5;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: #333;
   line-height: 1.6;
   display: flex;
@@ -17,74 +17,115 @@ body {
 
 /* Header */
 header {
-  background-color: #222;
+  background-color: rgba(0,0,0,0.7);
   color: #fff;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
+header p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* Main content */
 main {
   flex: 1;
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
 }
 
-/* Instructions section */
+/* Instructions */
 .instructions {
-  margin-bottom: 1.5rem;
+  max-width: 600px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  background-color: rgba(0,0,0,0.3);
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
 }
 
-/* Form section */
+/* Form card */
 .input-form {
   background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 .input-form label {
   display: block;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
+  font-weight: bold;
 }
 
 .input-form input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.7rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 1rem;
 }
 
 .input-form button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background-color: #222;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #2575fc;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .input-form button:hover {
-  background-color: #444;
+  background-color: #6a11cb;
+  transform: scale(1.05);
 }
 
 /* Result display */
 #result {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   font-weight: bold;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #e0e0e0;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1rem;
-  background-color: #222;
+  padding: 1rem 1rem;
+  background-color: rgba(0,0,0,0.7);
   color: #fff;
+  font-size: 0.9rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
